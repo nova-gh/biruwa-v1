@@ -3,7 +3,7 @@ import Carousel from "./Carousel";
 
 const Featured = () => {
   const slides = [
-    { name: "test", src: "/home/herobig.jpg" },
+    { name: "test", src: "/home/hero1.jpg" },
     { name: "test", src: "/home/hero2.jpg" },
     { name: "test", src: "/home/hero1.jpg" },
     { name: "test", src: "/home/hero2.jpg" },
