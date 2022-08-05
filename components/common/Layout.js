@@ -3,9 +3,9 @@ import Navbar from "./Navbar";
 
 const Layout = ({ children }) => {
   return (
-    <div className="flex flex-col justify-between h-screen antialiased bg-brand">
+    <div className="flex flex-col justify-between h-screen antialiased ">
       <Navbar />
-      <main className="w-full font-main">{children}</main>
+      <main className="w-full mb-auto font-main">{children}</main>
       <Footer />
     </div>
   );

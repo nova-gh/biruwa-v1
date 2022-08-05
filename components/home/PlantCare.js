@@ -18,8 +18,8 @@ const PlantCare = () => {
     },
   ];
   return (
-    <div className="py-20 space-y-4 bg-white ">
-      <h2 className="mx-auto text-3xl font-bold text-center text-brand ">
+    <div className="pt-20 space-y-10 bg-white ">
+      <h2 className="text-3xl font-bold text-center cont lg:text-4xl text-brand">
         Steps to start taking care of your plants
       </h2>
       <section className="flex flex-col py-10 gap-x-20 gap-y-14 cont md:flex-row">
@@ -33,7 +33,6 @@ const PlantCare = () => {
           </div>
         ))}
       </section>
-      {/* 3 icons */}
     </div>
   );
 };
