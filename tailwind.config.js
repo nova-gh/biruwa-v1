@@ -12,14 +12,14 @@ module.exports = {
       },
       colors: {
         text: {
-          dark: "",
+          dark: "#001714",
           DEFAULT: "#ffff",
           light: "#EFF7F5",
         },
         brand: {
           dark: "#4F000B",
           DEFAULT: "#004F44",
-          light: "#08FFDD",
+          light: "#1A5D53",
         },
       },
     },

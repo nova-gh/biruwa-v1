@@ -1,4 +1,6 @@
 import Layout from "../components/common/Layout";
+import Blogs from "../components/home/Blogs";
+import Featured from "../components/home/Featured";
 import HomeHero from "../components/home/HomeHero";
 import PlantCare from "../components/home/PlantCare";
 export default function Home({ args }) {
@@ -6,6 +8,8 @@ export default function Home({ args }) {
     <Layout>
       <HomeHero />
       <PlantCare />
+      <Featured />
+      <Blogs />
     </Layout>
   );
 }
