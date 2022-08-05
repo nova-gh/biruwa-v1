@@ -5,7 +5,7 @@ import HomeHero from "../components/home/HomeHero";
 import PlantCare from "../components/home/PlantCare";
 export default function Home({ args }) {
   return (
-    <Layout>
+    <Layout title="Home">
       <HomeHero />
       <PlantCare />
       <Featured />

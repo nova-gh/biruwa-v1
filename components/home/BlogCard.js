@@ -16,9 +16,9 @@ const BlogCard = ({ post }) => {
           />
         </div>
         <div className="flex flex-col justify-center flex-1 w-full px-6 py-10 space-y-4 sm:w-2/3 h-80">
-          <h4 className="mb-3 text-xl font-semibold tracking-tight capitalize text-text-dark ">
+          <h3 className="mb-3 text-xl font-semibold tracking-tight capitalize text-text-dark ">
             {post.title}
-          </h4>
+          </h3>
           <p className="w-full overflow-hidden leading-normal text-gray-700 truncate whitespace-normal ">
             {post.summary}
           </p>

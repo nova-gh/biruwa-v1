@@ -13,7 +13,7 @@ const Navbar = () => {
         <div className="hover:brightness-75 btn-hover">
           <Link href="/" passHref>
             <a>
-              <Image src="/logo.png" alt="logo" width="183" height="111" />
+              <Image src="/logo.png" alt="logo" width={183} height={111} />
             </a>
           </Link>
         </div>
