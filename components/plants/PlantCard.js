@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const PlantCard = ({ plant }) => {
+const PlantCard = ({ plant, key }) => {
   return (
     <Link href={`/plants/${plant.slug}`} passHref>
       <a>
@@ -12,6 +12,8 @@ const PlantCard = ({ plant }) => {
               alt={plant.name}
               layout="fill"
               className="overflow-hidden"
+              placeholder="blur"
+              priority={key === 0 ? "true" : "false"}
             />
           </div>
           <p className="min-h-[10%] my-4 text-base font-medium text-center transition-colors  2xl:text-lg text-text-dark hover:text-gray-700 ">
