@@ -5,7 +5,7 @@ import { getAllPlants, getPlantBySlug } from "../../lib/api";
 const DynamicBlogPage = ({ plant }) => {
   return (
     <Layout title={`Blog | ${plant.name}`}>
-      <div className="h-full py-20 bg-[#F3FFFC ">
+      <div className="h-full py-20 ">
         <div className="flex items-center justify-between cont ">
           <h1 className="leading-relaxed text-3xl font-bold underline lg:text-4xl text-brand underline-offset-[10px] ">
             {plant.name}

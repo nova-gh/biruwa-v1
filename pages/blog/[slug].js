@@ -8,7 +8,7 @@ const DynamicBlogPage = ({ post }) => {
   const date = d.toLocaleDateString("en-US", options);
   return (
     <Layout title={`Blog | ${post.title}`}>
-      <div className="py-20 bg-[#F3FFFC ">
+      <div className="py-20 ">
         <div className="flex items-center justify-between cont ">
           <h1 className="text-3xl font-bold underline lg:text-4xl text-brand underline-offset-[10px] ">
             {post.title}

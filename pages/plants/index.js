@@ -5,7 +5,7 @@ import { getAllPlants } from "../../lib/api";
 const PlantIndex = ({ plants }) => {
   return (
     <Layout title="Plant">
-      <div className="py-20 bg-[#F3FFFC ">
+      <div className="py-20 ">
         <div className="flex items-center justify-between cont ">
           <h1 className="text-3xl font-bold underline lg:text-4xl text-brand underline-offset-[10px] w-min">
             Plants
