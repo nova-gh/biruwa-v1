@@ -21,5 +21,6 @@ export const getStaticProps = async (ctx) => {
     props: {
       featuredPosts,
     },
+    revalidate: 86400,
   };
 };

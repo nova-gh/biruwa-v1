@@ -28,6 +28,7 @@ export const getStaticProps = async (params) => {
   return {
     props: {
       plants,
+      revalidate: 86400,
     },
   };
 };
