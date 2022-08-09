@@ -1,34 +1,16 @@
 import Link from "next/link";
 import BlogCard from "./BlogCard";
 
-const Blogs = () => {
-  const posts = [
-    {
-      imgSrc: "/home/hero1.jpg",
-      postSrc: "/plants",
-      imgAlt: "test",
-      title: "test",
-      summary:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta deserunt quos laudantium cum, pariatur quidem? Quod vitae ab, atque fugit, doloribus harum corporis, quam quasi unde explicabo vero sapiente quisquam!",
-    },
-    {
-      imgSrc: "/home/hero1.jpg",
-      postSrc: "#",
-      imgAlt: "test",
-      title: "test",
-      summary:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta deserunt quos laudantium cum, pariatur quidem? Quod vitae ab, atque fugit, doloribus harum corporis, quam quasi unde explicabo vero sapiente quisquam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta deserunt quos laudantium cum, pariatur quidem? Quod vitae ab, atque fugit, doloribus harum corporis, quam quasi unde explicabo vero sapiente quisquam!",
-    },
-  ];
+const Blogs = ({ posts }) => {
   return (
     <div className="py-20 bg-[#F3FFFC] ">
       <div className="flex items-center justify-between cont ">
-        <h2 className="text-3xl font-bold underline lg:text-4xl text-brand underline-offset-8 w-min">
-          Blogs
+        <h2 className="text-3xl font-bold underline lg:text-4xl text-brand underline-offset-[10px] w-min">
+          Blog
         </h2>
-        <Link href="/blogs">
+        <Link href="/blog">
           <button className="font-sec  px-4 py-3 space-x-2 text-sm lg:text-base font-semibold text-brand border border-brand rounded-lg btn-hover focus:shadow-outline hover:bg-[#F3FFFC] hover:text-brand-dark">
-            View All
+            Read More
           </button>
         </Link>
       </div>

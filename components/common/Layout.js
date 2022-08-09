@@ -24,7 +24,7 @@ const Layout = ({ children, title }) => {
         />
       </Head>
       <Navbar />
-      <main className="w-full mb-auto font-main">{children}</main>
+      <main className="flex-1 w-full mb-auto font-main">{children}</main>
       <Footer />
     </div>
   );

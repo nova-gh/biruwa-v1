@@ -3,9 +3,9 @@ import Link from "next/link";
 
 const Navbar = () => {
   const links = [
-    { name: "Home", src: "/home" },
+    { name: "Home", src: "/" },
     { name: "Plants", src: "/plants" },
-    { name: "Blog", src: "/plants" },
+    { name: "Blog", src: "/blog" },
   ];
   return (
     <header className="py-6 text-white bg-brand">

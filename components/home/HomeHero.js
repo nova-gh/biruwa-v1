@@ -4,7 +4,7 @@ import { GiPlantsAndAnimals } from "react-icons/gi";
 import { FaBlog } from "react-icons/fa";
 const HomeHero = () => {
   return (
-    <div className="bg-brand">
+    <div className="bg-brand ">
       <div className="flex flex-col gap-10 py-20 lg:gap-20 md:items-center md:flex-row cont bg-brand ">
         <div className="order-2 md:order-1 text-white md:w-[42%] text-center md:text-start space-y-8">
           <h1 className="text-5xl font-medium lg:text-7xl">
