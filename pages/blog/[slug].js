@@ -5,7 +5,6 @@ import Image from "next/image";
 import DateComp from "../../components/common/DateComp";
 import ReactMarkdown from "react-markdown";
 const DynamicBlogPage = ({ post }) => {
-  console.log(post);
   return (
     <Layout title={`Blog | ${post.title}`}>
       <div className="py-20 ">
