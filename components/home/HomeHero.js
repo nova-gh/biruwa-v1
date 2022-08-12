@@ -18,13 +18,13 @@ const HomeHero = () => {
             <Link href="/plants">
               <button className="flex items-center justify-center px-6 py-4 space-x-2 text-lg font-medium text-white rounded-lg bg-brand-dark btn-hover focus:shadow-outline hover:bg-[#F3FFFC] hover:text-brand-dark">
                 <span className=""> View Plants</span>
-                <GiPlantsAndAnimals />
+                <GiPlantsAndAnimals className="hidden md:block" />
               </button>
             </Link>
             <Link href="/blogs">
               <button className="flex items-center justify-center px-6 py-4 space-x-2 text-lg font-medium text-white border border-white rounded-lg btn-hover focus:shadow-outline hover:bg-[#F3FFFC] hover:text-brand-dark">
                 <span className=""> Explore Blogs</span>
-                <FaBlog />
+                <FaBlog className="hidden md:block" />
               </button>
             </Link>
           </div>

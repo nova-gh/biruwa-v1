@@ -2,9 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 const BlogCard = ({ post }) => {
-  const d = new Date(post.date);
   const options = { year: "numeric", month: "short", day: "numeric" };
-  const date = d.toLocaleDateString("en-US", options);
+  const formattedDate = (date) => {
+    const d = new Date(date).toLocaleDateString("en-US", options);
+    return d;
+  };
   return (
     <>
       <article className="flex flex-col w-full overflow-hidden bg-white rounded-lg shadow-lg sm:flex-row">
@@ -25,7 +27,9 @@ const BlogCard = ({ post }) => {
             {post.summary}
           </p>
           <div className="flex items-center justify-between font-sec">
-            <p className="text-sm leading-normal text-blue-700 ">{date}</p>
+            <p className="text-sm leading-normal text-blue-700 ">
+              {formattedDate(post.date)}
+            </p>
             <Link passHref href={`/blog/${post.slug}`}>
               <button className=" h-8 px-4 m-2 text-sm text-white rounded-lg btn-hover  bg-brand focus:shadow-outline hover:bg-[#F3FFFC] hover:text-brand-dark">
                 Read
