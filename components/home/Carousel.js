@@ -1,12 +1,12 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { Pagination, Navigation } from "swiper";
+import Link from "next/link";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import CarosuelCard from "./CarosuelCard";
 // import required modules
-import { Pagination, Navigation } from "swiper";
-import Image from "next/image";
 const Carousel = ({ slides }) => {
   return (
     <div className="relative w-full ">
@@ -28,22 +28,13 @@ const Carousel = ({ slides }) => {
             slidesPerView: 3,
           },
         }}
-        navigation={true}
+        // navigation={true}
         modules={[Pagination, Navigation]}
-        className="px-5 mySwiper"
+        className="my-10 "
       >
         {slides.map((s, i) => (
-          <SwiperSlide key={i} className="my-10 ">
-            <div className="relative h-[400px] w-full flex flex-col drop-shadow-md">
-              <Image
-                src={s.src}
-                layout="fill"
-                alt={"test"}
-                objectFit="cover"
-                className="overflow-hidden rounded-3xl"
-                objectPosition="center"
-              />
-            </div>
+          <SwiperSlide key={i} className="px-2 ">
+            <CarosuelCard s={s} />
           </SwiperSlide>
         ))}
       </Swiper>

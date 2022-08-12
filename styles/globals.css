@@ -39,30 +39,21 @@
     height: 100%;
     object-fit: cover;
   }
-  .my-node-enter {
-    opacity: 0;
-    background-color: #4F000B;
-  }
-  .my-node-enter-active {
-    opacity: 1;
-    transition: opacity 200ms;
-    background-color: #4F000B;
-  }
-  .my-node-exit {
-    background-color: #4F000B;
-    opacity: 1;
-  }
-  .my-node-exit-active {
-    opacity: 0;
-    transition: opacity 200ms;
-    background-color: #4F000B;
-  }
+
 }
 .swiper-button-prev{
   color: #4F000B !important;
 }
 .swiper-button-next { 
-  color: #4F000B !important;}
+  color: #4F000B !important;
+}
+.swiper-pagination{
+}
+.swiper-pagination-bullet{
+  background-color: #004F44 !important;
+  height: 20px !important;
+  width: 20px !important;
+}
 .swiper-pagination-bullet-active{
   background-color: #4F000B !important;
 }

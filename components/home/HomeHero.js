@@ -16,13 +16,13 @@ const HomeHero = () => {
           </p>
           <div className="font-sec flex justify-center order-3 space-x-6 md:space-x-0 md:flex-col md:space-y-6 lg:flex-row lg:space-y-0 lg:justify-start lg:space-x-5 xl:space-x-10 md:w-[70%] lg:w-full">
             <Link href="/plants">
-              <button className="flex items-center justify-center px-6 py-4 space-x-2 text-lg font-medium text-white rounded-lg bg-brand-dark btn-hover focus:shadow-outline hover:bg-[#F3FFFC] hover:text-brand-dark">
+              <button className="flex items-center justify-center px-6 py-4 space-x-2 text-lg font-medium text-white rounded-lg bg-brand-dark btn-hover  hover:bg-[#F3FFFC] hover:text-brand-dark">
                 <span className=""> View Plants</span>
                 <GiPlantsAndAnimals className="hidden md:block" />
               </button>
             </Link>
             <Link href="/blog">
-              <button className="flex items-center justify-center px-6 py-4 space-x-2 text-lg font-medium text-white border border-white rounded-lg btn-hover focus:shadow-outline hover:bg-[#F3FFFC] hover:text-brand-dark">
+              <button className="flex items-center justify-center px-6 py-4 space-x-2 text-lg font-medium text-white border border-white rounded-lg btn-hover  hover:bg-[#F3FFFC] hover:text-brand-dark">
                 <span className=""> Explore Blogs</span>
                 <FaBlog className="hidden md:block" />
               </button>

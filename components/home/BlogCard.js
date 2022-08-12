@@ -5,7 +5,7 @@ import DateComp from "../common/DateComp";
 const BlogCard = ({ post }) => {
   return (
     <>
-      <article className="flex flex-col w-full overflow-hidden bg-white rounded-lg shadow-lg sm:flex-row">
+      <article className="flex flex-col w-full overflow-hidden transition-all duration-200 bg-white rounded-lg shadow-lg sm:flex-row hover:shadow-xl">
         <div className="relative w-full sm:h-auto h-80 sm:w-1/3">
           <Image
             src={post.img?.url}
@@ -25,7 +25,7 @@ const BlogCard = ({ post }) => {
           <div className="flex items-center justify-between font-sec">
             <DateComp date={post.date} />
             <Link passHref href={`/blog/${post.slug}`}>
-              <button className=" h-8 px-4 m-2 text-sm text-white rounded-lg btn-hover  bg-brand focus:shadow-outline hover:bg-[#F3FFFC] hover:text-brand-dark">
+              <button className=" h-8 px-4 m-2 text-sm text-white rounded-lg btn-hover  bg-brand  hover:bg-[#F3FFFC] hover:text-brand-dark">
                 Read
               </button>
             </Link>

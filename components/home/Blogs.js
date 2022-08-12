@@ -9,7 +9,7 @@ const Blogs = ({ posts }) => {
           Blog
         </h2>
         <Link href="/blog">
-          <button className="font-sec  px-4 py-3 space-x-2 text-sm lg:text-base font-semibold text-brand border border-brand rounded-lg btn-hover focus:shadow-outline hover:bg-[#F3FFFC] hover:text-brand-dark">
+          <button className="font-sec  px-4 py-3 space-x-2 text-sm lg:text-base font-semibold text-brand border border-brand rounded-lg btn-hover  hover:bg-[#F3FFFC] hover:text-brand-dark">
             Read More
           </button>
         </Link>

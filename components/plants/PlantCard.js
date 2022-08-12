@@ -18,7 +18,7 @@ const PlantCard = ({ plant }) => {
   return (
     <Link href={`/plants/${plant.slug}`} passHref>
       <a>
-        <div className="flex flex-col items-center w-full max-w-sm mx-auto overflow-hidden transition-all ease-in-out border shadow group-hover: h-96 hover:scale-105 hover:text-brand-light border-primary-600 rounded-xl ">
+        <div className="flex flex-col items-center w-full max-w-sm mx-auto overflow-hidden transition-all ease-in-out border shadow-md hover:shadow-lg h-96 hover:scale-105 hover:text-brand-light border-primary-600 rounded-xl ">
           <div className="relative w-full h-[75%]">
             <Image
               src={plant.img?.url}

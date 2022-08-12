@@ -3,10 +3,10 @@ import Carousel from "./Carousel";
 
 const Featured = () => {
   const slides = [
-    { name: "test", src: "/home/hero1.jpg" },
-    { name: "test", src: "/home/hero2.jpg" },
-    { name: "test", src: "/home/hero1.jpg" },
-    { name: "test", src: "/home/hero2.jpg" },
+    { name: "plant1", imgSrc: "/home/hero1.jpg", src: "/plants" },
+    { name: "plant2", imgSrc: "/home/hero2.jpg", src: "/plants" },
+    { name: "plant3", imgSrc: "/home/hero1.jpg", src: "/plants" },
+    { name: "plant4", imgSrc: "/home/hero2.jpg", src: "/plants" },
   ];
   return (
     <div className="py-20 bg-white">
@@ -15,12 +15,12 @@ const Featured = () => {
           Featured
         </h2>
         <Link href="/plants">
-          <button className="font-sec  lg:text-base px-4 py-3 space-x-2 text-sm font-semibold text-brand border border-brand rounded-lg btn-hover focus:shadow-outline hover:bg-[#F3FFFC] hover:text-brand-dark">
+          <button className="font-sec  lg:text-base px-4 py-3 space-x-2 text-sm font-semibold text-brand border border-brand rounded-lg btn-hover  hover:bg-[#F3FFFC] hover:text-brand-dark">
             View All
           </button>
         </Link>
       </div>
-      <section className="flex cont">
+      <section className="flex mb-20 cont">
         <Carousel slides={slides} />
       </section>
     </div>
