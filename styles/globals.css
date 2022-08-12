@@ -39,6 +39,24 @@
     height: 100%;
     object-fit: cover;
   }
+  .my-node-enter {
+    opacity: 0;
+    background-color: #4F000B;
+  }
+  .my-node-enter-active {
+    opacity: 1;
+    transition: opacity 200ms;
+    background-color: #4F000B;
+  }
+  .my-node-exit {
+    background-color: #4F000B;
+    opacity: 1;
+  }
+  .my-node-exit-active {
+    opacity: 0;
+    transition: opacity 200ms;
+    background-color: #4F000B;
+  }
 }
 .swiper-button-prev{
   color: #4F000B !important;

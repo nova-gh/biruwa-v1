@@ -73,7 +73,8 @@ const Navbar = () => {
         </div>
         <div className=" lg:hidden">
           <button
-            className={`p-2 text-white border border-transparent rounded-md outline-none focus:border-white
+            className={`p-2 text-white border border-transparent rounded-md outline-none focus:border-white hover:bg-brand-dark ease-in-out
+            btn-hover
             `}
             onClick={handleMobileMenu}
           >
@@ -81,7 +82,7 @@ const Navbar = () => {
             {toggle ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className={`w-10 h-10    transition-all duration-200
+                className={`w-8 h-8    transition-all duration-200
                 
                 `}
                 viewBox="0 0 20 20"
@@ -96,7 +97,7 @@ const Navbar = () => {
             ) : (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className={`w-10 h-10 transition-all duration-200
+                className={`w-8 h-8 transition-all duration-200
                 `}
                 fill="none"
                 viewBox="0 0 24 24"

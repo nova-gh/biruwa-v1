@@ -30,3 +30,5 @@ yarn-error.log*
 
 # vercel
 .vercel
+contentful-export-shd2ow60s6kh-master-2022-08-12T13-03-30.json
+export-config.json
