@@ -12,12 +12,12 @@ const DynamicBlogPage = ({ plant }) => {
           </h1>
         </div>
         <article className="flex flex-col justify-between gap-10 my-10 space-y-5 cont lg:flex-row">
-          <div className="max-w-lg lg:max-w-full relative  bg-red-500 min-h-[400px] lg:min-h-[600px] w-full  lg:w-1/2 h-1/2 rounded-lg shadow-lg overflow-hidden">
+          <div className="max-w-lg lg:max-w-full relative   min-h-[400px] lg:min-h-[800px] w-full  lg:w-1/2 h-1/2 rounded-lg shadow-lg overflow-hidden">
             <Image
               src={plant.img?.url}
               alt={plant.name}
               layout="fill"
-              className=""
+              objectFit="cover"
             />
           </div>
           <p className="w-full text-gray-700 lg:w-1/2 ">{plant.description}</p>

@@ -2,16 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .cont {
+@layer components{
+   .cont {
     @apply container max-w-[1440px] px-7 lg:px-8 xl:px-6 2xl:px-0 mx-auto
   }
   .btn-hover{
     @apply transition-all duration-150 ease-linear
   }
- 
-}
-@layer components{
   .swiper {
     width: 100%;
     height: 100%;

@@ -10,6 +10,25 @@ module.exports = {
         main: ["Libre Baskerville", "sans-serif"],
         sec: ["Roboto", "sans-serif"],
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          color: "#333",
+          css: {
+            h1: {
+              color: theme("colors.brand.DEFAULT"),
+            },
+            h2: {
+              color: theme("colors.brand.DEFAULT"),
+            },
+            h3: {
+              color: theme("colors.brand.DEFAULT"),
+            },
+            p: {
+              color: theme("colors.gray.700"),
+            },
+          },
+        },
+      }),
       colors: {
         text: {
           dark: "#001714",
@@ -24,5 +43,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };

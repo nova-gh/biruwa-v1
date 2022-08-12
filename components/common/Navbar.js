@@ -31,17 +31,19 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="hidden space-x-12 text-lg lg:text-xl font-sec lg:flex">
-          <a
-            className={`${
-              activeRoute === "/"
-                ? "underline underline-offset-[10px] font-semibold"
-                : "text-white font-normal"
-            }
+          <Link href="/" passHref>
+            <a
+              className={`${
+                activeRoute === "/"
+                  ? "underline underline-offset-[10px] font-semibold"
+                  : "text-white font-normal"
+              }
               hover:scale-105 ease-in-out duration-75 transition-transform
               `}
-          >
-            Home
-          </a>
+            >
+              Home
+            </a>
+          </Link>
           <Link href="/plants" passHref>
             <a
               className={` ${
@@ -112,11 +114,15 @@ const Navbar = () => {
         </div>
       </div>
       <div
-        className={`absolute inset-y-0 inset-x-0   z-40 w-full  bg-brand flex  ${
+        className={`absolute inset-y-0 inset-x-0   z-40 w-full  bg-brand flex ${
           toggle ? "translate-y-0" : "-translate-y-full"
         } transition-transform duration-500 ease-in-out `}
       >
-        <div className="flex flex-col items-center w-full h-full px-8 space-y-10 text-3xl mt-44 ">
+        <div
+          className={`flex flex-col items-center w-full  px-8 py-10 space-y-10 text-3xl mt-44 delay-75 ease-linear 
+          ${toggle ? "opacity-100" : "opacity-0 "} 
+          `}
+        >
           <Link href="/" passHref>
             <a
               className={`${
