@@ -16,7 +16,7 @@ const rgbDataURL = (r, g, b) =>
 const CarosuelCard = ({ s }) => {
   return (
     <div className="w-full overflow-hidden rounded-xl">
-      <div className="h-[400px] bg-red-300 relative">
+      <div className="h-[400px] relative">
         <Image
           src={s.img?.url}
           layout="fill"
