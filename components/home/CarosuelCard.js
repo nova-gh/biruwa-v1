@@ -18,7 +18,7 @@ const CarosuelCard = ({ s }) => {
     <div className="w-full overflow-hidden rounded-xl">
       <div className="h-[400px] bg-red-300 relative">
         <Image
-          src={s.imgSrc}
+          src={s.img?.url}
           layout="fill"
           alt={"test"}
           objectFit="cover"
@@ -26,9 +26,9 @@ const CarosuelCard = ({ s }) => {
           placeholder="blur"
         />
       </div>
-      <div className="flex items-center justify-between p-4 bg-[#F3FFFC] ">
+      <div className="flex items-center justify-between px-4 py-6 gap-8 bg-[#F3FFFC] ">
         <p className="">{s.name}</p>
-        <Link passHref href={s.src}>
+        <Link passHref href={`/plants/${s.slug}`}>
           <button
             tabIndex={-1}
             className=" h-8 px-4 m-2 text-sm text-white  btn-hover rounded-lg  bg-brand hover:bg-[#F3FFFC]  hover:text-brand-dark"

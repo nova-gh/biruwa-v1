@@ -8,11 +8,6 @@ const DynamicBlogPage = ({ post }) => {
   return (
     <Layout title={`Blog | ${post.title}`}>
       <div className="py-20 ">
-        {/* <div className="flex items-center justify-between cont ">
-          <h1 className="text-3xl font-bold underline lg:text-4xl text-brand underline-offset-[10px] ">
-            {post.title}
-          </h1>
-        </div> */}
         <section className="space-y-5 cont">
           <div className="relative flex flex-col max-w-full overflow-hidden rounded-lg shadow-lg h-80">
             <Image

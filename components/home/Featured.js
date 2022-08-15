@@ -1,13 +1,7 @@
 import Link from "next/link";
 import Carousel from "./Carousel";
 
-const Featured = () => {
-  const slides = [
-    { name: "plant1", imgSrc: "/home/hero1.jpg", src: "/plants" },
-    { name: "plant2", imgSrc: "/home/hero2.jpg", src: "/plants" },
-    { name: "plant3", imgSrc: "/home/hero1.jpg", src: "/plants" },
-    { name: "plant4", imgSrc: "/home/hero2.jpg", src: "/plants" },
-  ];
+const Featured = ({ featuredPlants }) => {
   return (
     <div className="py-20 bg-white">
       <div className="flex items-center justify-between cont">
@@ -21,7 +15,7 @@ const Featured = () => {
         </Link>
       </div>
       <section className="flex mb-20 cont">
-        <Carousel slides={slides} />
+        <Carousel slides={featuredPlants} />
       </section>
     </div>
   );

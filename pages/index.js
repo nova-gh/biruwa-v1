@@ -3,13 +3,13 @@ import Blogs from "../components/home/Blogs";
 import Featured from "../components/home/Featured";
 import HomeHero from "../components/home/HomeHero";
 import PlantCare from "../components/home/PlantCare";
-import { getLatestPost } from "../lib/api";
-export default function Home({ featuredPosts }) {
+import { getLatestPlants, getLatestPost } from "../lib/api";
+export default function Home({ featuredPosts, featuredPlants }) {
   return (
     <Layout title="Home">
       <HomeHero />
       <PlantCare />
-      <Featured />
+      <Featured featuredPlants={featuredPlants} />
       <Blogs posts={featuredPosts} />
     </Layout>
   );
@@ -17,9 +17,12 @@ export default function Home({ featuredPosts }) {
 
 export const getStaticProps = async (ctx) => {
   const featuredPosts = (await getLatestPost()) ?? [];
+  const featuredPlants = (await getLatestPlants()) ?? [];
+
   return {
     props: {
       featuredPosts,
+      featuredPlants,
     },
     revalidate: 86400,
   };
