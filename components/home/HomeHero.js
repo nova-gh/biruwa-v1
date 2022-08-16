@@ -60,6 +60,7 @@ const HomeHero = () => {
                 alt="test"
                 objectFit="cover"
                 className="pr-10 rounded-r-3xl "
+                priority
               />
             </div>
           </div>

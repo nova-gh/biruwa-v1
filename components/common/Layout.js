@@ -1,6 +1,7 @@
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import Head from "next/head";
+import { Toaster } from "react-hot-toast";
 const Layout = ({ children, title }) => {
   return (
     <div className="flex flex-col justify-between h-screen antialiased ">
@@ -24,6 +25,30 @@ const Layout = ({ children, title }) => {
         />
       </Head>
       <Navbar />
+      <Toaster
+        postion="top-right"
+        toastOptions={{
+          duration: 9000,
+          success: {
+            style: {
+              backgroundColor: "#004F44",
+              color: "white",
+              fontSize: "1.2rem",
+              width: "100%",
+              fontWeight: "bold",
+            },
+          },
+          error: {
+            style: {
+              backgroundColor: "#4F000B",
+              color: "white",
+              fontSize: "1.2rem",
+              width: "100%",
+              fontWeight: "bold",
+            },
+          },
+        }}
+      />
       <main className="flex-1 w-full mb-auto font-main">{children}</main>
       <Footer />
     </div>
