@@ -31,7 +31,7 @@ const CarosuelCard = ({ s }) => {
         <Link passHref href={`/plants/${s.slug}`}>
           <button
             tabIndex={-1}
-            className=" h-8 px-4 m-2 text-sm text-white  btn-hover rounded-lg  bg-brand hover:bg-[#F3FFFC]  hover:text-brand-dark"
+            className="h-8 px-4 m-2 text-sm text-white rounded-lg  btn-hover bg-brand/80 hover:bg-brand"
           >
             View
           </button>

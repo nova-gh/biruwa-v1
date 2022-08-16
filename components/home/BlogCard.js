@@ -25,7 +25,7 @@ const BlogCard = ({ post }) => {
           <div className="flex items-center justify-between font-sec">
             <DateComp date={post.date} />
             <Link passHref href={`/blog/${post.slug}`}>
-              <button className=" h-8 px-4 m-2 text-sm text-white rounded-lg btn-hover  bg-brand  hover:bg-[#F3FFFC] hover:text-brand-dark">
+              <button className="h-8 px-4 m-2 text-sm text-white rounded-lg btn-hover bg-brand/80 hover:bg-brand ">
                 Read
               </button>
             </Link>
