@@ -5,7 +5,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"
             href="https://fonts.gstatic.com"
@@ -13,7 +12,13 @@ export default class MyDocument extends Document {
           />
           <link
             href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
+            rel="preload"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
             rel="stylesheet"
+            media="print"
+            onLoad="this.media='all'"
           />
           <link href="/favicon/favicon.ico" rel="shortcut icon" />
           <link rel="manifest" href="/favicon/site.webmanifest" />
@@ -34,6 +39,12 @@ export default class MyDocument extends Document {
             sizes="16x16"
             href="/favicon/favicon-16x16.png"
           />
+          <noscript>
+            <link
+              href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
+              rel="stylesheet"
+            />
+          </noscript>
         </Head>
         <body>
           <Main />

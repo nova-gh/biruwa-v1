@@ -8,6 +8,8 @@ export default function handler(req, res) {
   }
   if (req.method === "POST") {
     return addForm();
+  }else{
+    res.status(404).send("Not found");
   }
   async function addForm() {
     try {
