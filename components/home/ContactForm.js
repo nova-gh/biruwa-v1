@@ -24,15 +24,15 @@ const ContactForm = () => {
     const result = await res.json();
     setLoading(false);
     if (!result.error) {
-      toast.success(`Email sent from ${result.entry.email}`);
+      toast.success(`Message recived from ${result.entry.email}`);
+      setSucessMessage(true);
+      setName("");
+      setEmail("");
+      setMessage("");
       setSucessMessage(true);
     } else {
       toast.error(result.message);
     }
-    setName("");
-    setEmail("");
-    setMessage("");
-    setSucessMessage(true);
   };
   return (
     <div className="py-20 ">
@@ -41,14 +41,14 @@ const ContactForm = () => {
           Contact
         </h2>
         <form
-          className="flex flex-col w-full max-w-lg p-4 my-10 space-y-6 border-2 rounded-md border-brand-light"
+          className="flex flex-col w-full max-w-lg p-4 my-10 space-y-6 border-2 rounded-md shadow-xl border-brand-light"
           onSubmit={submitContact}
         >
           <fieldset className="flex flex-col ">
-            <label htmlFor="name" className="mb-2 text-text-dark ">
+            <label htmlFor="name" className=" text-text-dark xl:text-lg">
               Name
             </label>
-            <div className="flex items-center mt-2 space-x-2">
+            <div className="flex items-center mt-2 space-x-4">
               <svg
                 width="24"
                 height="24"
@@ -75,7 +75,7 @@ const ContactForm = () => {
                 onChange={(e) => setName(e.target.value)}
                 value={name}
                 required
-                className="w-full h-12 px-4 mb-2 overflow-hidden text-gray-700 placeholder-gray-500 capitalize border-b xl:text-lg focus:rounded-lg outline-brand-light border-brand-light "
+                className="w-full h-12 px-4 mb-2 overflow-hidden text-gray-700 placeholder-gray-400 capitalize border rounded-lg xl:text-lg outline-brand-light border-brand-light "
                 type="name"
                 id="name"
                 name="name"
@@ -84,10 +84,10 @@ const ContactForm = () => {
             </div>
           </fieldset>
           <fieldset className="flex flex-col ">
-            <label htmlFor="email" className="mb-2 text-text-dark">
+            <label htmlFor="email" className=" text-text-dark">
               Email
             </label>
-            <div className="flex items-center mt-2 space-x-2">
+            <div className="flex items-center mt-2 space-x-4">
               <svg
                 width="24"
                 height="24"
@@ -113,7 +113,7 @@ const ContactForm = () => {
               <input
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="w-full h-12 px-4 mb-2 overflow-hidden text-gray-700 placeholder-gray-500 border-b xl:text-lg focus:rounded-lg outline-brand-light border-brand-light "
+                className="w-full h-12 px-4 mb-2 overflow-hidden text-gray-700 placeholder-gray-400 border rounded-lg xl:text-lg outline-brand-light border-brand-light "
                 type="email"
                 id="email"
                 name="email"
@@ -123,10 +123,10 @@ const ContactForm = () => {
             </div>
           </fieldset>
           <fieldset className="flex flex-col ">
-            <label htmlFor="message" className="mb-2 text-text-dark ">
+            <label htmlFor="message" className=" text-text-dark xl:text-lg">
               Message
             </label>
-            <div className="flex mt-2 space-x-2">
+            <div className="flex mt-2 space-x-4">
               <svg
                 width="24"
                 height="24"
@@ -158,7 +158,7 @@ const ContactForm = () => {
               <textarea
                 required
                 onChange={(e) => setMessage(e.target.value)}
-                className="w-full px-4 py-2 overflow-hidden text-gray-700 placeholder-gray-500 border-b h-28 xl:text-lg focus:rounded-lg outline-brand-light border-brand-light "
+                className="w-full px-4 py-2 overflow-hidden text-gray-700 placeholder-gray-400 border rounded-lg h-28 outline-brand-light border-brand-light "
                 type="text"
                 id="message"
                 name="message"
@@ -167,12 +167,16 @@ const ContactForm = () => {
               />
             </div>
           </fieldset>
-          <div className="flex">
-            {sucessMessage && <p className="text-brand">Email Sent!</p>}
+          <div className="flex items-center pt-5">
+            {sucessMessage && (
+              <p className="font-bold underline text-brand underline-offset-2">
+                Message Recived!
+              </p>
+            )}
             <button
               type="submit"
               disabled={loading || !name || !email || !message}
-              className="px-4 py-2 ml-auto font-bold text-white rounded-lg btn-hover bg-brand/80 hover:bg-brand w-max disabled:bg-gray-500"
+              className="px-4 py-2 ml-auto font-bold text-white rounded-lg btn-hover bg-brand/80 hover:bg-brand w-max disabled:bg-gray-500 lg:text-lg"
             >
               Submit
             </button>

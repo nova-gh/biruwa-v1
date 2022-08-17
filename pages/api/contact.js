@@ -13,7 +13,7 @@ export default function handler(req, res) {
     try {
       const space = await client.getSpace(process.env.CONTENTFUL_SPACE_ID);
       const env = await space.getEnvironment("nextjs");
-      const entry = await env.createEntryWithId("form", uuid, {
+      const entry = await env.createEntryWithId("form",uuid, {
         fields: {
           name: {
             "en-US": name,
@@ -30,7 +30,7 @@ export default function handler(req, res) {
     } catch (e) {
       return res
         .status(500)
-        .json({ error: e, message: "Unsecessfull sending Message" });
+        .json({ error: e, message: "Server Error, Please try again." });
     }
   }
 }

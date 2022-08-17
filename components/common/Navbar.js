@@ -10,14 +10,14 @@ const Navbar = () => {
     setToggle(!toggle);
   };
 
-  useEffect(() => {
-    if (toggle) {
-      document.body.style.overflow = "hidden";
-    } else document.body.style.overflow = "unset";
-  }, [toggle]);
+  // useEffect(() => {
+  //   if (toggle) {
+  //     document.body.style.overflow = "hidden";
+  //   } else document.body.style.overflow = "unset";
+  // }, [toggle]);
   return (
-    <header className="py-6 text-white bg-brand">
-      <div className="relative z-50 flex items-center justify-between cont">
+    <header className="relative py-6 text-white bg-brand ">
+      <div className="z-50 flex items-center justify-between cont">
         <div className=" hover:brightness-75 btn-hover">
           <Link href="/" passHref>
             <a>
@@ -188,56 +188,61 @@ const Navbar = () => {
             )}
           </button>
         </div>
-      </div>
-      <div
-        className={`absolute inset-y-0 inset-x-0   z-40 w-full  bg-brand flex ${
-          toggle ? "translate-y-0" : "-translate-y-full"
-        } transition-transform duration-500 ease-in-out `}
-      >
         <div
-          className={`flex flex-col items-center w-full  px-8 py-10 space-y-10 text-3xl mt-44 delay-75 ease-linear 
+          // toggle ? "translate-y-0" : "-translate-y-full"  transition-transform duration-500 ease-in-out
+          className={`absolute inset-x-0 z-[55] w-full bg-brand rounded-b-2xl border-b-2 top-full    ${
+            toggle ? "flex " : "hidden "
+          } 
+        }`}
+        >
+          <div
+            className={`flex flex-col items-center w-full  px-8 py-10 space-y-10 text-3xl  delay-75 ease-linear 
           ${toggle ? "opacity-100" : "opacity-0 "} 
           `}
-        >
-          <Link href="/" passHref>
-            <a
-              className={`${
-                activeRoute === "/"
-                  ? "underline underline-offset-[10px] font-semibold"
-                  : "text-white font-normal"
-              }
+          >
+            <Link href="/" passHref>
+              <a
+                onClick={handleMobileMenu}
+                className={`${
+                  activeRoute === "/"
+                    ? "underline underline-offset-[10px] font-semibold"
+                    : "text-white font-normal"
+                }
               hover:scale-105 ease-in-out duration-75 transition-transform
               `}
-            >
-              Home
-            </a>
-          </Link>
-          <Link href="/plants" passHref>
-            <a
-              className={` ${
-                activeRoute.includes("/plants")
-                  ? "underline underline-offset-[10px] font-semibold"
-                  : "text-white font-normal no-underline"
-              }
+              >
+                Home
+              </a>
+            </Link>
+            <Link href="/plants" passHref>
+              <a
+                onClick={handleMobileMenu}
+                className={` ${
+                  activeRoute.includes("/plants")
+                    ? "underline underline-offset-[10px] font-semibold"
+                    : "text-white font-normal no-underline"
+                }
+                  hover:scale-105 ease-in-out duration-75 transition-transform
+                  `}
+              >
+                Plants
+              </a>
+            </Link>
+            <Link href="/blog" passHref>
+              <a
+                onClick={handleMobileMenu}
+                className={` ${
+                  activeRoute.includes("/blog")
+                    ? "underline underline-offset-[10px] font-semibold"
+                    : "text-white font-normal"
+                }
               hover:scale-105 ease-in-out duration-75 transition-transform
               `}
-            >
-              Plants
-            </a>
-          </Link>
-          <Link href="/blog" passHref>
-            <a
-              className={` ${
-                activeRoute.includes("/blog")
-                  ? "underline underline-offset-[10px] font-semibold"
-                  : "text-white font-normal"
-              }
-              hover:scale-105 ease-in-out duration-75 transition-transform
-              `}
-            >
-              Blog
-            </a>
-          </Link>
+              >
+                Blog
+              </a>
+            </Link>
+          </div>
         </div>
       </div>
     </header>
