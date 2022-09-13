@@ -26,6 +26,6 @@ export const getStaticProps = async (ctx) => {
       featuredPosts,
       featuredPlants,
     },
-    revalidate: 86400,
+    revalidate: 60,
   };
 };
